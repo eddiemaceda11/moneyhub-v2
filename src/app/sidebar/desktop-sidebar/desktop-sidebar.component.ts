@@ -3,7 +3,7 @@ import { NgClass } from '@angular/common';
 
 @Component({
   selector: 'app-desktop-sidebar',
-  //imports: [NgClass],
+  imports: [NgClass],
   templateUrl: './desktop-sidebar.component.html',
   styleUrl: './desktop-sidebar.component.scss',
 })

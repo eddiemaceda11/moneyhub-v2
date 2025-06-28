@@ -1,47 +1,51 @@
 <header>
+  @if (sidebarOpen) {
   <h2>moneyhub</h2>
+  } @else {
+  <h2>m</h2>
+  }
 </header>
 <nav>
   <a href="/">
     <div>
       <i class="fa-solid fa-house"></i>
-      <p>Dashboard</p>
+      <p [ngClass]="{ hidden: !sidebarOpen }">Dashboard</p>
     </div>
   </a>
   <a href="/">
     <div>
       <i class="fa-solid fa-money-bill-transfer"></i>
-      <p>Transactions</p>
+      <p [ngClass]="{ hidden: !sidebarOpen }">Transactions</p>
     </div>
   </a>
   <a href="/">
     <div>
       <i class="fa-solid fa-chart-pie"></i>
-      <p>Budgets</p>
+      <p [ngClass]="{ hidden: !sidebarOpen }">Budgets</p>
     </div>
   </a>
   <a href="/">
     <div>
       <i class="fa-solid fa-envelope"></i>
-      <p>Sinking Funds</p>
+      <p [ngClass]="{ hidden: !sidebarOpen }">Sinking Funds</p>
     </div>
   </a>
   <a href="/">
     <div>
       <i class="fa-solid fa-repeat"></i>
-      <p>Recurring Bills</p>
+      <p [ngClass]="{ hidden: !sidebarOpen }">Recurring Bills</p>
     </div>
   </a>
   <a href="/">
     <div>
       <i class="fa-solid fa-coins"></i>
-      <p>Investments</p>
+      <p [ngClass]="{ hidden: !sidebarOpen }">Investments</p>
     </div>
   </a>
   <a href="/">
     <div>
       <i class="fa-solid fa-arrow-trend-up"></i>
-      <p>Stocks</p>
+      <p [ngClass]="{ hidden: !sidebarOpen }">Stocks</p>
     </div>
   </a>
   <!-- <a href="/">
