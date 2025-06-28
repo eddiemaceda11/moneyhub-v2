@@ -1,0 +1,19 @@
+:host {
+  display: flex;
+  flex: 1;
+  height: auto;
+  box-sizing: border-box; /* Includes padding in the width */
+  background-color: inherit;
+  overflow: scroll;
+
+  div {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    padding: 32px 40px;
+    width: 100%;
+    height: fit-content;
+    min-height: 1075px;
+    position: relative;
+  }
+}
