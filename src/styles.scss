@@ -1,8 +1,38 @@
+:root {
+  // --primary-bg-beige: rgba(243, 243, 243, 1);
+  // --secondary-bg-beige: rgba(248, 249, 251, 1);
+  --primary-bg-beige: rgb(242, 246, 251);
+  --secondary-bg-beige: rgba(251, 252, 251, 0.928);
+  // --color-grey-900: #201f24;
+  // --color-grey-500: #696868;
+  // --color-grey-300: #b3b3b3;
+  // --color-grey-100: #f2f2f2;
+  // --color-p-white: #fff;
+
+  // --color-dark-green: #277c78;
+  // --color-cyan: #82c9d7;
+  // --color-yellow: #f2cdac;
+  // --color-navy: #626070;
+
+  // --font-bold: 700;
+  // --font-regular: 400;
+
+  font-family: "Public Sans", serif;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
+
+// .nunito-sans-<uniquifier > {
+//   font-family: "Nunito Sans", sans-serif;
+//   font-optical-sizing: auto;
+//   font-weight: <weight>;
+//   font-style: normal;
+//   font-variation-settings: "wdth" 100, "YTLC" 500;
+// }
 
 body {
   margin: 0;
@@ -12,6 +42,13 @@ body {
   min-height: 100vh;
   height: 100vh;
   overscroll-behavior: none;
+
+  font-family: "Nunito Sans", sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: #353337;
 }
 
 // #root {
