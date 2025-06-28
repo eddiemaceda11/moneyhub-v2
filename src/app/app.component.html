@@ -1,0 +1,5 @@
+<app-desktop-sidebar
+  [ngClass]="{ 'sidebar-open': sidebarOpen, 'sidebar-closed': !sidebarOpen }"
+  (sidebar)="toggleSidebar()"
+/>
+<app-main />
