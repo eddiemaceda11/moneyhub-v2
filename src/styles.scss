@@ -9,10 +9,10 @@
   // --color-grey-100: #f2f2f2;
   // --color-p-white: #fff;
 
-  // --color-dark-green: #277c78;
-  // --color-cyan: #82c9d7;
-  // --color-yellow: #f2cdac;
-  // --color-navy: #626070;
+  --color-dark-green: #277c78;
+  --color-cyan: #82c9d7;
+  --color-yellow: #f2cdac;
+  --color-navy: #626070;
 
   // --font-bold: 700;
   // --font-regular: 400;
@@ -34,13 +34,17 @@
 //   font-variation-settings: "wdth" 100, "YTLC" 500;
 // }
 
+html {
+  height: 100%;
+}
+
 body {
   margin: 0;
   display: flex;
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
-  height: 100vh;
+  height: 100%;
   overscroll-behavior: none;
 
   font-family: "Nunito Sans", sans-serif;
@@ -52,9 +56,16 @@ a {
 }
 
 .hidden {
-  display: none;
+  // display: none;
+  opacity: 0;
 }
 
+.hide-sidebar-item {
+  // display: none;
+  opacity: 0 !important;
+  transition: opacity 0.3s ease-in-out !important;
+  pointer-events: none; /* Prevents interaction when collapsed */
+}
 // #root {
 //   width: 100%;
 //   /* margin: 0 auto */
