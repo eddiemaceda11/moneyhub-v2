@@ -2,50 +2,74 @@
   @if (sidebarOpen) {
   <h2>moneyhub</h2>
   } @else {
-  <h2>m</h2>
+  <h2 class="collapsed">m</h2>
   }
 </header>
 <nav>
   <a href="/">
     <div>
       <i class="fa-solid fa-house"></i>
-      <p [ngClass]="{ hidden: !sidebarOpen }">Dashboard</p>
+      <p [ngClass]="{ 'hide-sidebar-item': !sidebarOpen }">Dashboard</p>
     </div>
   </a>
   <a href="/">
     <div>
       <i class="fa-solid fa-money-bill-transfer"></i>
-      <p [ngClass]="{ hidden: !sidebarOpen }">Transactions</p>
+      <p
+        [ngClass]="{ hidden: !sidebarOpen, 'hide-sidebar-item': !sidebarOpen }"
+      >
+        Transactions
+      </p>
     </div>
   </a>
   <a href="/">
     <div>
       <i class="fa-solid fa-chart-pie"></i>
-      <p [ngClass]="{ hidden: !sidebarOpen }">Budgets</p>
+      <p
+        [ngClass]="{ hidden: !sidebarOpen, 'hide-sidebar-item': !sidebarOpen }"
+      >
+        Budgets
+      </p>
     </div>
   </a>
   <a href="/">
     <div>
       <i class="fa-solid fa-envelope"></i>
-      <p [ngClass]="{ hidden: !sidebarOpen }">Sinking Funds</p>
+      <p
+        [ngClass]="{ hidden: !sidebarOpen, 'hide-sidebar-item': !sidebarOpen }"
+      >
+        Sinking Funds
+      </p>
     </div>
   </a>
   <a href="/">
     <div>
       <i class="fa-solid fa-repeat"></i>
-      <p [ngClass]="{ hidden: !sidebarOpen }">Recurring Bills</p>
+      <p
+        [ngClass]="{ hidden: !sidebarOpen, 'hide-sidebar-item': !sidebarOpen }"
+      >
+        Recurring Bills
+      </p>
     </div>
   </a>
   <a href="/">
     <div>
       <i class="fa-solid fa-coins"></i>
-      <p [ngClass]="{ hidden: !sidebarOpen }">Investments</p>
+      <p
+        [ngClass]="{ hidden: !sidebarOpen, 'hide-sidebar-item': !sidebarOpen }"
+      >
+        Investments
+      </p>
     </div>
   </a>
   <a href="/">
     <div>
       <i class="fa-solid fa-arrow-trend-up"></i>
-      <p [ngClass]="{ hidden: !sidebarOpen }">Stocks</p>
+      <p
+        [ngClass]="{ hidden: !sidebarOpen, 'hide-sidebar-item': !sidebarOpen }"
+      >
+        Stocks
+      </p>
     </div>
   </a>
   <!-- <a href="/">
@@ -62,9 +86,9 @@
   </a> -->
 </nav>
 
-<footer>
+<footer (click)="toggleSidebar()">
   <div><-</div>
-  <button (click)="toggleSidebar()">Minimize Menu</button>
+  <button>Minimize Menu</button>
 </footer>
 
 <!-- <footer onClick={() => setSidebarOpen(!sidebarOpen)}>
