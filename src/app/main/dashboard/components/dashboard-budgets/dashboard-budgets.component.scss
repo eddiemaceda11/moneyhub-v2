@@ -1,0 +1,166 @@
+:host {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
+  height: 330px;
+  padding: 24px;
+  background-color: var(--secondary-bg-beige);
+  border: 1px solid#cecfd3b7;
+  border-radius: 6px;
+  box-shadow: 0px 4px 24px 0px #d6d6d658;
+
+  .dashboard__budget-header {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 24px;
+
+    .dashboard__budget-header-amount {
+      font-size: 20px;
+      line-height: 120%;
+      color: var(--color-grey-900);
+    }
+
+    .dashboard__budget-header-details {
+      font-size: 14px;
+      line-height: 150%;
+      color: var(--color-grey-500);
+    }
+  }
+
+  .dashboard__budget-content {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    width: 100%;
+    /* width: 364px; */
+    height: 302px;
+    padding: 8px 0px;
+
+    .dashboard__budget-content-left {
+      display: flex;
+      justify-content: center;
+      gap: 8px;
+      width: 248px;
+      height: 240px;
+      position: relative;
+
+      .dashboard_budget-graph--outer {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 240px;
+        height: 240px;
+        background-color: rgb(168, 213, 227);
+        border-radius: 50%;
+        position: absolute;
+        z-index: 1;
+
+        .dashboard_budget-graph--middle {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 187.5px;
+          height: 187.5px;
+          background-color: rgba(
+            255,
+            255,
+            255,
+            0.3
+          ); /* 0.3 opacity prevents the opacity from affecting the child element - inner-pie-graph */
+          border-radius: 50%;
+          position: absolute;
+          z-index: 2;
+
+          .dashboard_budget-graph--inner {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 162px;
+            height: 162px;
+            background-color: #fff;
+            border-radius: 50%;
+            position: absolute;
+            z-index: 4;
+
+            .dashboard_budget-graph-data {
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              justify-content: center;
+              gap: 4px;
+              width: 86px;
+              height: 64px;
+
+              .dashboard_budget-graph-data-amount {
+                width: 86px;
+                height: 38px;
+                color: var(--color-grey-900);
+                font-size: 32px;
+                font-weight: var(--font-bold);
+                line-height: 120%;
+              }
+
+              .dashboard_budget-graph-data-limit {
+                width: 73px;
+                height: 18px;
+                color: var(--color-grey-500);
+                font-size: 12px;
+                line-height: 150%;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .dashboard__budget-content-right {
+      display: flex;
+      gap: 16px;
+      width: 101px;
+      height: 220px;
+      flex-direction: column;
+
+      .dashboard__budget-category-container {
+        display: flex;
+        gap: 16px;
+        width: 101px;
+        height: 43px;
+
+        .dashboard__budget-category-border {
+          width: 4px;
+          height: 43px;
+          background-color: var(--color-cyan);
+          border-radius: 8px;
+        }
+
+        .dashboard__budget-category-details {
+          display: flex;
+          flex-direction: column;
+          gap: 4px;
+          width: 81px;
+          height: 43px;
+          text-align: start;
+
+          .dashboard__budget-category-name {
+            width: 80px;
+            height: 18px;
+            color: var(--color-grey-500);
+            font-size: 12px;
+            line-height: 150%;
+          }
+
+          .dashboard__budget-category-amount {
+            width: 50px;
+            height: 21px;
+            color: var(--color-grey-900);
+            font-size: 14px;
+            font-weight: var(--font-bold);
+            line-height: 150%;
+          }
+        }
+      }
+    }
+  }
+}
