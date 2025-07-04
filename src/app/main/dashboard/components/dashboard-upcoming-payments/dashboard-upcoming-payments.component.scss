@@ -1,0 +1,84 @@
+:host {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  width: 100%;
+  height: 208px;
+  padding: 24px;
+  background-color: var(--secondary-bg-beige);
+  border: 1px solid#cecfd3b7;
+  border-radius: 6px;
+  box-shadow: 0px 4px 24px 0px #d6d6d658;
+
+  .dashboard__upcoming-payments-header {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 24px;
+
+    .dashboard__upcoming-payments-header-title {
+      width: 200px;
+      height: 24px;
+      font-size: 20px;
+      font-weight: var(--font-bold);
+      line-height: 120%;
+      color: var(--color-grey-900);
+    }
+
+    .dashboard__upcoming-payments-header-details-container {
+      display: flex;
+      gap: 12px;
+      width: 98px;
+      height: 21px;
+
+      .dashboard__upcoming-payments-header-details {
+        width: 74px;
+        height: 21px;
+        font-size: 14px;
+        line-height: 150%;
+        color: var(--color-grey-500);
+      }
+
+      .dashboard__upcoming-payments-header-details-arrow {
+        width: 8px;
+        height: 5px;
+        color: var(--color-grey-500);
+      }
+    }
+  }
+
+  .dashboard__upcoming-payments-content-container {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    width: 100%;
+    height: 207px;
+
+    .dashboard__upcoming-payments-item {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      // height: px;
+      padding: 5px 16px;
+      background-color: var(--primary-bg-beige);
+      border: 1px solid#cecfd3b7;
+      border-radius: 8px;
+      border-left: 4px solid var(--color-dark-green);
+
+      .dashboard__upcoming-payments-item-title {
+        width: 115px;
+        height: 21px;
+        font-size: 14px;
+        line-height: 150%;
+        text-align: start;
+        color: var(--color-grey-500);
+      }
+
+      .dashboard__upcoming-payments-item-amount {
+        font-size: 12px;
+        font-weight: 700;
+        line-height: 180%;
+      }
+    }
+  }
+}
