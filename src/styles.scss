@@ -36,15 +36,18 @@
 
 html {
   height: 100%;
+  width: 100%;
 }
 
 body {
   margin: 0;
   display: flex;
   place-items: center;
-  min-width: 320px;
+  width: 100%;
+  // min-width: 320px;
   min-height: 100vh;
   height: 100%;
+  overflow-x: hidden;
   overscroll-behavior: none;
 
   font-family: "Nunito Sans", sans-serif;
