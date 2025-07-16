@@ -1,5 +1,13 @@
 <header class="dashboard__header">
   <h1 class="dashboard__header-title">Dashboard</h1>
+  <form class="dashboard__header-searchbar-container">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <input
+      class="dashboard__header-searchbar"
+      type="text"
+      placeholder="Search"
+    />
+  </form>
 </header>
 <div class="main-content__container">
   <div class="main-content__summary">
@@ -22,24 +30,8 @@
       <app-dashboard-transactions />
     </div>
     <div class="additionals-section__right">
-      <!--  -->
       <app-dashboard-budgets />
-      <div class="dashboard__upcoming-payments">
-        <div class="dashboard__upcoming-payments-header">
-          <h3 class="dashboard__upcoming-payments-header-title">
-            Upcoming Payments
-          </h3>
-          <div class="dashboard__upcoming-payments-header-details-container">
-            <p class="dashboard__upcoming-payments-header-details">
-              See Details
-            </p>
-            <span class="dashboard__upcoming-payments-header-details-arrow"
-              >x</span
-            >
-          </div>
-        </div>
-        <!--  -->
-      </div>
+      <app-dashboard-upcoming-payments />
     </div>
   </div>
 </div>
