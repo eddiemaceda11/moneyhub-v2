@@ -1,3 +1,43 @@
+<!-- START DASHBOARD/SINKING-FUND MODAL -->
+<dialog class="sinking-funds__modal--backdrop" open="false">
+  <div class="sinking-funds__modal--add-new">
+    <header class="sinking-funds__modal--add-new__header-container">
+      <h1 class="sinking-funds__modal--add-new__header-title">Add New Fund</h1>
+      <i
+        class="fa-solid fa-circle-xmark sinking-funds__modal--add-new__header-icon"
+      ></i>
+    </header>
+    <div class="sinking-funds__modal--add-new__sub-header">
+      Create a pot to set savings targets. These can help keep you on track as
+      you save for special purchases.
+    </div>
+    <form class="sinking-funds__modal--add-new__form">
+      <div class="sinking-funds__modal--add-new__form-fund-name-container">
+        <label class="sinking-funds__modal--add-new__form-fund-name-label"
+          >Fund Name</label
+        >
+        <input
+          placeholder="e.g. Christmas"
+          class="sinking-funds__modal--add-new__form-fund-name-input"
+        />
+        <span class="sinking-funds__modal--add-new__form-fund-name-span"
+          >30 Characters left</span
+        >
+      </div>
+      <div class="sinking-funds__modal--add-new__form-target-amt-container">
+        <label class="sinking-funds__modal--add-new__form-target-amt-label"
+          >Target</label
+        >
+        <input
+          placeholder="$  e.g. 2000"
+          class="sinking-funds__modal--add-new__form-target-amt-input"
+        />
+      </div>
+    </form>
+    <button class="sinking-funds__modal--add-new__button">Add Fund</button>
+  </div>
+</dialog>
+<!-- END DASHBOARD/SINKING-FUND MODAL -->
 <app-desktop-sidebar
   [ngClass]="{ 'sidebar-open': sidebarOpen, 'sidebar-closed': !sidebarOpen }"
   (sidebar)="toggleSidebar()"
