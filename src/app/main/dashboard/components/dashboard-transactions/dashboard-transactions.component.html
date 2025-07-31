@@ -6,7 +6,52 @@
   </div>
 </header>
 <div class="dashboard__transactions-table">
+  <!-- If transaction cards were fetched from the database -->
+  @if (dashboardTransactions.length > 0) {
+  <!-- Render each transaction card -->
+  @for (transaction of dashboardTransactions; track transaction.id) {
   <div class="dashboard__transactions-table-transaction">
+    <div class="dashboard__transactions-table-transaction-left">
+      <img
+        class="dashboard__transaction-image"
+        src="images/avatars/emma-richardson.jpg"
+        alt=""
+      />
+      <p class="dashboard__transaction-name">{{ transaction.description }}</p>
+    </div>
+    <div class="dashboard__transactions-table-transaction-right">
+      <p class="dashboard__transaction-amount negative-transaction">
+        {{
+          transaction.type === "INCOME"
+            ? "+$" + transaction.amount
+            : "-$" + transaction.amount
+        }}
+      </p>
+      <span class="dashboard__transaction-date">{{
+        formatDate(transaction.createdAt)
+      }}</span>
+    </div>
+  </div>
+  <div class="oti-line"></div>
+  } }
+  <!-- If transaction cards not fetched from the database -->
+  @else { @for (loadingCard of loadingCards; track loadingCard) {
+  <div class="dashboard__transactions-table-transaction">
+    <div class="dashboard__transactions-table-transaction-left">
+      <img class="dashboard__transaction-image skeleton" alt="" />
+      <div class="skeleton skeleton-title"></div>
+    </div>
+    <div class="dashboard__transactions-table-transaction-right">
+      <div class="skeleton skeleton-text"></div>
+      <div class="skeleton skeleton-text"></div>
+    </div>
+  </div>
+  <div class="oti-line"></div>
+  } }
+</div>
+
+<!--  -->
+<!-- <div class="dashboard__transactions-table-transaction">
     <div class="dashboard__transactions-table-transaction-left">
       <img
         class="dashboard__transaction-image"
@@ -64,5 +109,4 @@
       <p class="dashboard__transaction-amount negative-transaction">-$125.00</p>
       <span class="dashboard__transaction-date">19 Aug 2024</span>
     </div>
-  </div>
-</div>
+  </div> -->
