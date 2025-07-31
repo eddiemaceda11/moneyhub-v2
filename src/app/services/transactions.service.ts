@@ -7,7 +7,7 @@ import { map } from 'rxjs/operators';
   providedIn: 'root',
 })
 export class TransactionsService {
-  url = 'http://localhost:3010/transactions';
+  url = 'http://localhost:3010/dashboard/transactions';
 
   constructor(private http: HttpClient) {}
 
