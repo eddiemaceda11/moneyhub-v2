@@ -13,18 +13,27 @@
   .dashboard__sinking-funds-header {
     display: flex;
     justify-content: space-between;
+    gap: 0.5rem;
     height: 24px;
 
     .dashboard__sinking-funds-header-title {
       font-size: 20px;
       line-height: 120%;
       color: rgb(69, 69, 94);
+      // border: 1px solid red;
+    }
+
+    .db_sinking-fund-edit-icon {
+      font-size: 12px;
+      // border: 1px solid red;
     }
 
     .dashboard__sinking-funds-header-details {
       font-size: 14px;
       line-height: 150%;
       color: rgb(69, 69, 94);
+      // border: 1px solid red;
+      margin-left: auto;
     }
   }
 
