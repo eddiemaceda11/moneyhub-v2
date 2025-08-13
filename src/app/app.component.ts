@@ -5,15 +5,19 @@ import { MainComponent } from './main/main.component';
 import { NgClass } from '@angular/common';
 import { TransactionsService } from './services/transactions.service';
 import { AddSinkingFundComponent } from './ui/modals/sinking-funds/add-sinking-fund/add-sinking-fund.component';
+import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
 // import { ServiceService, User } from './services/service.service';
 
 @Component({
   selector: 'app-root',
   imports: [
     DesktopSidebarComponent,
-    MainComponent,
+    //MainComponent,
     NgClass,
     AddSinkingFundComponent,
+    RouterOutlet,
+    //RouterLink,
+    //RouterLinkActive,
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
