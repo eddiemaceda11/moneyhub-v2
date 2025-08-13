@@ -6,4 +6,5 @@
   [ngClass]="{ 'sidebar-open': sidebarOpen, 'sidebar-closed': !sidebarOpen }"
   (sidebar)="toggleSidebar()"
 />
-<app-main />
+<router-outlet></router-outlet>
+<!-- <app-main /> -->
