@@ -1,8 +1,6 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
-import { Observable } from 'rxjs';
 import { TransactionsService } from '../../../../services/transactions.service';
 import { CommonModule } from '@angular/common';
-import { map, pipe } from 'rxjs';
 
 type Transaction = {
   amount: string;
