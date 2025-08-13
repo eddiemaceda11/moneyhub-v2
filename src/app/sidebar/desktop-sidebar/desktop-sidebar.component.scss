@@ -21,6 +21,14 @@
     width: 63px;
   }
 
+  .active-sidebar-item {
+    background-color: rgb(226, 235, 249) !important;
+    width: 240px;
+    border-top-right-radius: 12px;
+    border-bottom-right-radius: 12px;
+    cursor: pointer;
+  }
+
   // p,
   // h2 {
   //   opacity: 1;
@@ -56,6 +64,15 @@
     padding-right: 24px;
 
     a {
+      &:hover {
+        background-color: rgb(238, 238, 238);
+        //color: rgb(242, 246, 251);
+        width: 240px;
+        border-top-right-radius: 12px;
+        border-bottom-right-radius: 12px;
+        cursor: pointer;
+      }
+
       div {
         display: flex;
         align-items: center;
@@ -68,10 +85,10 @@
         border-bottom-right-radius: 12px;
         cursor: pointer;
 
-        &:hover {
-          background-color: rgb(226, 235, 249);
-          //color: rgb(242, 246, 251);
-        }
+        // &:hover {
+        //   background-color: rgb(238, 238, 238);
+        //   //color: rgb(242, 246, 251);
+        // }
 
         i {
           width: 24px;

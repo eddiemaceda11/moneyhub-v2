@@ -6,13 +6,13 @@
   }
 </header>
 <nav>
-  <a href="/">
+  <a routerLink="/dashboard" routerLinkActive="active-sidebar-item">
     <div>
       <i class="fa-solid fa-house"></i>
       <p [ngClass]="{ 'hide-sidebar-item': !sidebarOpen }">Dashboard</p>
     </div>
   </a>
-  <a href="/">
+  <a routerLink="/transactions" routerLinkActive="active-sidebar-item">
     <div>
       <i class="fa-solid fa-money-bill-transfer"></i>
       <p
@@ -22,7 +22,7 @@
       </p>
     </div>
   </a>
-  <a href="/">
+  <a routerLink="/budgets" routerLinkActive="active-sidebar-item">
     <div>
       <i class="fa-solid fa-chart-pie"></i>
       <p
@@ -32,7 +32,7 @@
       </p>
     </div>
   </a>
-  <a href="/">
+  <a routerLink="/sinking-funds" routerLinkActive="active-sidebar-item">
     <div>
       <i class="fa-solid fa-envelope"></i>
       <p
@@ -42,7 +42,7 @@
       </p>
     </div>
   </a>
-  <a href="/">
+  <a routerLink="/recurring" routerLinkActive="active-sidebar-item">
     <div>
       <i class="fa-solid fa-repeat"></i>
       <p
@@ -52,7 +52,7 @@
       </p>
     </div>
   </a>
-  <a href="/">
+  <a routerLink="/investments" routerLinkActive="active-sidebar-item">
     <div>
       <i class="fa-solid fa-coins"></i>
       <p
@@ -62,7 +62,7 @@
       </p>
     </div>
   </a>
-  <a href="/">
+  <a routerLink="/stocks" routerLinkActive="active-sidebar-item">
     <div>
       <i class="fa-solid fa-arrow-trend-up"></i>
       <p
