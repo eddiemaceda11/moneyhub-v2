@@ -1,1 +1,37 @@
-<p>dashboard works!</p>
+<header class="dashboard__header">
+  <h1 class="dashboard__header-title">Dashboard</h1>
+  <form class="dashboard__header-searchbar-container">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <input
+      class="dashboard__header-searchbar"
+      type="text"
+      placeholder="Search"
+    />
+  </form>
+</header>
+<div class="main-content__container">
+  <div class="main-content__summary">
+    <div class="main-content__summary-item">
+      <h4 class="main-content__summary-item-title">Current Balance</h4>
+      <p class="main-content__summary-item-amount">$4,836.00</p>
+    </div>
+    <div class="main-content__summary-item">
+      <h4 class="main-content__summary-item-title">Income</h4>
+      <p class="main-content__summary-item-amount">$3,254.00</p>
+    </div>
+    <div class="main-content__summary-item">
+      <h4 class="main-content__summary-item-title">Expenses</h4>
+      <p class="main-content__summary-item-amount">$1,824.00</p>
+    </div>
+  </div>
+  <div class="additionals-section">
+    <div class="additionals-section__left">
+      <app-dashboard-sinking-funds />
+      <app-dashboard-transactions />
+    </div>
+    <div class="additionals-section__right">
+      <app-dashboard-budgets />
+      <app-dashboard-upcoming-payments />
+    </div>
+  </div>
+</div>
