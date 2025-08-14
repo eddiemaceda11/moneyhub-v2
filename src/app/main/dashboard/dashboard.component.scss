@@ -155,11 +155,28 @@
         flex-direction: column;
         gap: 24px;
         width: 42.64%;
+        min-width: 428px;
         // max-width: 428px;
         height: 100%;
         overflow: hidden;
         // border: 1px solid red;
       }
     }
+  }
+
+  @media (max-width: 1024px) {
+    .main-content__container {
+      .additionals-section {
+        flex-direction: column;
+
+        .additionals-section__left,
+        .additionals-section__right {
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
   }
 }
