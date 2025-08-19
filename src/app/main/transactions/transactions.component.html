@@ -9,3 +9,38 @@
     />
   </form>
 </header>
+<div class="transactions__content-container">
+  <!-- Transactions Menu Configuration -->
+  <div class="transactions__menu">
+    <div class="transactions__searchbar">
+      <input type="text" [(ngModel)]="transactionSearchValue" />
+      <button class="transactions__searchbar-button">
+        <i class="fa-solid fa-magnifying-glass"></i>
+      </button>
+    </div>
+    <div class="transactions__filters">
+      <div class="transactions__sort-by">
+        <p>Sort by</p>
+        <select name="" id="" (change)="changeSortByOption($event)">
+          <option value="latest">Latest</option>
+          <option value="oldest">Oldest</option>
+          <option value="az">A to Z</option>
+          <option value="za">Z to A</option>
+          <option value="highest">Highest</option>
+          <option value="lowest">Lowest</option>
+        </select>
+      </div>
+      <div class="transactions__categories">
+        <p>Category</p>
+        <select (change)="changeCategoryOption($event)">
+          <option value="all">All Transactions</option>
+          <option value="entertainment">Entertainment</option>
+          <option value="groceries">Groceries</option>
+          <option value="bills">Bills</option>
+          <option value="dining">Dining</option>
+          <option value="personal">Personal Care</option>
+        </select>
+      </div>
+    </div>
+  </div>
+</div>
