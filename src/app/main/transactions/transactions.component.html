@@ -51,4 +51,24 @@
     <p>Transaction Date</p>
     <p>Amount</p>
   </div>
+
+  <!-- TRANSACTIONS TABLE -->
+  <div className="transactions__table">
+    <!-- INDIVIDUAL TRANSACTION -->
+    @for (transaction of filteredTransactions.slice(currentPagination.start,
+    currentPagination.end); track transaction) {
+    <div class="transactions__table-transaction">
+      <div class="recipient__sender">
+        <img src="" alt="" />
+        <p>{{ transaction.name }}</p>
+      </div>
+      <p class="transactions__category">{{ transaction.category }}</p>
+      <p class="transaction__date">{{ transaction.date }}</p>
+      <p class="transaction__amount">
+        {{ formatCurrency(transaction.amount) }}
+      </p>
+    </div>
+    <hr class="transactions__table--horizontal-line" />
+    }
+  </div>
 </div>
