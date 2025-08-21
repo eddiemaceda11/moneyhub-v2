@@ -53,7 +53,7 @@
   </div>
 
   <!-- TRANSACTIONS TABLE -->
-  <div className="transactions__table">
+  <div class="transactions__table">
     <!-- INDIVIDUAL TRANSACTION -->
     @for (transaction of filteredTransactions.slice(currentPagination.start,
     currentPagination.end); track transaction) {
@@ -68,7 +68,7 @@
         {{ formatCurrency(transaction.amount) }}
       </p>
     </div>
-    <hr class="transactions__table--horizontal-line" />
+    <div class="transactions__table--horizontal-line"></div>
     }
   </div>
 </div>
