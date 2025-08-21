@@ -44,4 +44,30 @@ export class TransactionsComponent {
   setPagination() {
     this.currentPagination = { start: 0, end: 10 };
   }
+
+  handleNextOrPrevPagination(
+    direction: 'next' | 'prev',
+    itemsPerPage: number = 10
+  ) {
+    const pageSize = itemsPerPage;
+
+    if (direction === 'next') {
+      if (this.currentPagination.end >= this.filteredTransactions.length)
+        return;
+
+      const newPaginationStart = this.currentPagination.start + pageSize;
+      const newPaginationEnd = this.currentPagination.end + pageSize;
+      this.currentPagination.start = newPaginationStart;
+      this.currentPagination.end = newPaginationEnd;
+    }
+
+    if (direction === 'prev') {
+      if (this.currentPagination.start < pageSize) return;
+
+      const newPaginationStart = this.currentPagination.start - pageSize;
+      const newPaginationEnd = this.currentPagination.end - pageSize;
+      this.currentPagination.start = newPaginationStart;
+      this.currentPagination.end = newPaginationEnd;
+    }
+  }
 }
