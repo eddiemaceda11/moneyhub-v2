@@ -70,4 +70,31 @@ export class TransactionsComponent {
       this.currentPagination.end = newPaginationEnd;
     }
   }
+
+  paginationCountButtons() {
+    let countOfPaginationButtonsToRender = [];
+
+    const amountOfTotalPages = Math.ceil(this.filteredTransactions.length / 10);
+
+    for (let i = 0; i < amountOfTotalPages; i++) {
+      countOfPaginationButtonsToRender.push(i + 1);
+    }
+
+    return countOfPaginationButtonsToRender;
+  }
+
+  paginationSelected(event: MouseEvent) {
+    const target = event.target as HTMLButtonElement;
+    const paginationButtonValue = Number(target.textContent);
+    this.updateCurrentTransactionsRendered(paginationButtonValue);
+  }
+
+  updateCurrentTransactionsRendered(value: number) {
+    const newValue = value - 1;
+    const newStartAsString = String(newValue) + '0';
+    const newStartAsNumber = Number(newStartAsString);
+    const newEnd = newStartAsNumber + 10;
+    this.currentPagination.start = newStartAsNumber;
+    this.currentPagination.end = newEnd;
+  }
 }
