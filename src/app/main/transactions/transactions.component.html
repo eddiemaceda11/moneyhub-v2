@@ -9,66 +9,88 @@
     />
   </form>
 </header>
-<div class="transactions__content-container">
-  <!-- Transactions Menu Configuration -->
-  <div class="transactions__menu">
-    <div class="transactions__searchbar">
-      <input type="text" [(ngModel)]="transactionSearchValue" />
-      <button class="transactions__searchbar-button">
-        <i class="fa-solid fa-magnifying-glass"></i>
-      </button>
-    </div>
-    <div class="transactions__filters">
-      <div class="transactions__sort-by">
-        <p>Sort by</p>
-        <select name="" id="" (change)="changeSortByOption($event)">
-          <option value="latest">Latest</option>
-          <option value="oldest">Oldest</option>
-          <option value="az">A to Z</option>
-          <option value="za">Z to A</option>
-          <option value="highest">Highest</option>
-          <option value="lowest">Lowest</option>
-        </select>
+<div class="main-content__container">
+  <div class="transactions__content-container">
+    <!-- Transactions Menu Configuration -->
+    <div class="transactions__menu">
+      <div class="transactions__searchbar">
+        <input type="text" [(ngModel)]="transactionSearchValue" />
+        <button class="transactions__searchbar-button">
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </button>
       </div>
-      <div class="transactions__categories">
-        <p>Category</p>
-        <select (change)="changeCategoryOption($event)">
-          <option value="all">All Transactions</option>
-          <option value="entertainment">Entertainment</option>
-          <option value="groceries">Groceries</option>
-          <option value="bills">Bills</option>
-          <option value="dining">Dining</option>
-          <option value="personal">Personal Care</option>
-        </select>
+      <div class="transactions__filters">
+        <div class="transactions__sort-by">
+          <p>Sort by</p>
+          <select name="" id="" (change)="changeSortByOption($event)">
+            <option value="latest">Latest</option>
+            <option value="oldest">Oldest</option>
+            <option value="az">A to Z</option>
+            <option value="za">Z to A</option>
+            <option value="highest">Highest</option>
+            <option value="lowest">Lowest</option>
+          </select>
+        </div>
+        <div class="transactions__categories">
+          <p>Category</p>
+          <select (change)="changeCategoryOption($event)">
+            <option value="all">All Transactions</option>
+            <option value="entertainment">Entertainment</option>
+            <option value="groceries">Groceries</option>
+            <option value="bills">Bills</option>
+            <option value="dining">Dining</option>
+            <option value="personal">Personal Care</option>
+          </select>
+        </div>
       </div>
     </div>
-  </div>
 
-  <!-- TABLE HEADER -->
-  <div class="transactions__table-header">
-    <p>Recipient/Sender</p>
-    <p>Category</p>
-    <p>Transaction Date</p>
-    <p>Amount</p>
-  </div>
-
-  <!-- TRANSACTIONS TABLE -->
-  <div class="transactions__table">
-    <!-- INDIVIDUAL TRANSACTION -->
-    @for (transaction of filteredTransactions.slice(currentPagination.start,
-    currentPagination.end); track transaction) {
-    <div class="transactions__table-transaction">
-      <div class="recipient__sender">
-        <img src="" alt="" />
-        <p>{{ transaction.name }}</p>
-      </div>
-      <p class="transactions__category">{{ transaction.category }}</p>
-      <p class="transaction__date">{{ transaction.date }}</p>
-      <p class="transaction__amount">
-        {{ formatCurrency(transaction.amount) }}
-      </p>
+    <!-- TABLE HEADER -->
+    <div class="transactions__table-header">
+      <p>Recipient/Sender</p>
+      <p>Category</p>
+      <p>Transaction Date</p>
+      <p>Amount</p>
     </div>
-    <div class="transactions__table--horizontal-line"></div>
-    }
+
+    <!-- TRANSACTIONS TABLE -->
+    <div class="transactions__table">
+      <!-- INDIVIDUAL TRANSACTION -->
+      @for (transaction of filteredTransactions.slice(currentPagination.start,
+      currentPagination.end); track transaction) {
+      <div class="transactions__table-transaction">
+        <div class="recipient__sender">
+          <img src="" alt="" />
+          <p>{{ transaction.name }}</p>
+        </div>
+        <p class="transactions__category">{{ transaction.category }}</p>
+        <p class="transaction__date">{{ transaction.date }}</p>
+        <p class="transaction__amount">
+          {{ formatCurrency(transaction.amount) }}
+        </p>
+      </div>
+      <div class="transactions__table--horizontal-line"></div>
+      }
+    </div>
+
+    <!-- TRANSACTIONS NAVIGATION -->
+    <div class="transactions__table-navigation">
+      <div className="transactions__nav-button-container">
+        <button (click)="handleNextOrPrevPagination('prev')">
+          <span>←</span> Prev
+        </button>
+      </div>
+      <div className="transaction__nav-pages">
+        @for (paginationButton of paginationCountButtons(); track
+        paginationButton) {
+        <button (click)="($event)"></button>
+        }
+      </div>
+      <div className="transactions__nav-button-container">
+        <button (click)="handleNextOrPrevPagination('next')">
+          Next <span>→</span>
+        </button>
+      </div>
+    </div>
   </div>
 </div>
