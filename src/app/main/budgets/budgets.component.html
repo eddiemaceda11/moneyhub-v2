@@ -1,1 +1,28 @@
-<p>budgets works!</p>
+<div class="budgets__header">
+  <h1>Budgets</h1>
+  <button>+Add New Budget</button>
+</div>
+<div class="budgets__content-container">
+  <div class="budgets__graph-container">
+    <div class="budgets__graph">
+      <div
+        class="budgets__outer-graph"
+        [ngStyle]="{
+          'background':
+            'conic-gradient(var(--color-dark-green) 30%, var(--color-cyan) 30% 85%, var(--color-yellow) 85%)',
+          'borderRadius': '50%',
+          'clipPath': 'circle(50% at 50% 50%)',
+        }"
+      >
+        <div class="budgets__middle-graph">
+          <div class="budgets__inner-graph">
+            <div class="budgets__graph-details">
+              <div class="budgets__graph-details-top">$338</div>
+              <div class="budgets__graph-details-bottom">of $975 limit</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
